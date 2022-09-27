@@ -1,0 +1,65 @@
+---
+title: "HW 02 - NY Motor Vehicle Crashes"
+author: "Insert your name here"
+date: "Insert date here"
+output: github_document
+---
+
+## Load packages and data
+
+```{r load-packages, message = FALSE}
+library(tidyverse)
+library(lubridate)
+library(vroom)
+crashes = vroom(
+  gsub(pattern = "[ \n]", "", "https://urmc-bst.github.io/bst430-fall2021-site
+          /hw_lab_instruction/hw02-accidents/data/ny_collisions_2018_2019.csv.gz"))
+        
+```
+
+## Exercises
+
+### Exercise 1
+
+Remove this text, and add your answer for Exercise 1 here.
+
+### Exercise 2
+
+```{r label-me-1}
+
+```
+
+Add descriptions as necessary
+
+### Exercise 3
+
+Add code and description as needed
+
+### Exercise 4
+
+Add code and description as needed
+
+
+### Exercise 5
+
+```{r ex5-plot-density}
+ggplot() + # Add your data and aesthetics and other modifications
+  scale_fill_viridis_d() #use the viridis color palette for "severity"
+```
+
+Add description
+
+### Exercise 6
+
+```{r ex6-total-fatal}
+ggplot() + #  Add your data and aesthetics
+  geom_jitter(height = .2) + # jitter y -- but not too much!
+                             # want to still discern the integers here
+  scale_color_manual(labels = c("Nov-Apr", "May-Oct"), 
+                     values = c('purple', 'orange'))
+```
+
+### Exercise 7
+
+
+### Exercise 8
